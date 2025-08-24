@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Suporte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Formulário de Suporte</h1>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000004OgF7" method="POST">
+      
+      <input type="hidden" name="orgid" value="00DgK000004OgF7">
+      <input type="hidden" name="retURL" value="https://play.watch.tv.br/login">
+      <input type="hidden" id="external" name="external" value="1" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" maxlength="80" required>
+
+      <label for="phone">Telefone</label>
+      <input id="phone" name="phone" type="text" maxlength="40">
+
+      <label for="reason">Motivo do Caso</label>
+      <select id="reason" name="reason">
+        <option value="">--Selecione--</option>
+        <option value="Installation">Instalação</option>
+        <option value="Equipment Complexity">Complexidade</option>
+        <option value="Performance">Desempenho</option>
+        <option value="Breakdown">Falha</option>
+        <option value="Equipment Design">Design</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Outro</option>
+        <option value="Cartao Credito">Cartão Crédito</option>
+        <option value="Cartao Debito">Cartão Débito</option>
+      </select>
+
+      <label for="subject">Assunto</label>
+      <input id="subject" name="subject" type="text" maxlength="80">
+
+      <label for="description">Descrição</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <button type="submit">Enviar</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
